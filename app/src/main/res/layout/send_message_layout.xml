@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1.0"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85"
+        android:weightSum="1.0">
+
+        <RelativeLayout
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:background="#aa0000"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_marginTop="15dp"
+                android:id="@+id/txtvpreset"
+                android:text="Select Preset"
+                android:textSize="30sp"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="#aaaa0000"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imvtipbar"
+                android:layout_below="@+id/txtvpreset"
+                android:background="@drawable/tipbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/txtvpointone"
+                android:layout_below="@+id/imvtipbar"
+                android:text="1. I have an emergency."
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="#aa740000"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtvpointtwo"
+                android:layout_below="@+id/txtvpointone"
+                android:text="2. Deviation is on clents discretion."
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="#aa740000"
+
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtvpointthree"
+                android:layout_below="@+id/txtvpointtwo"
+                android:text="3. I am heading for food/ refueling"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="#aa740000"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/txtvpointfour"
+                android:layout_below="@+id/txtvpointthree"
+                android:text="4. I am heading to pick-up client."
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="#aa740000"
+
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:background="#aa740000"
+                android:id="@+id/txtvpointfive"
+                android:layout_below="@+id/txtvpointfour"
+                android:text="5. I am lost."
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="1.0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <EditText
+                            android:padding="20dp"
+                            android:textColor="#000"
+                            android:id="@+id/messageBox"
+                            android:hint="Write Text to send here."
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5">
+
+                    <ListView
+                        android:id="@+id/lstserverMessages"
+                        android:dividerHeight="1px"
+
+                        android:divider="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </ListView>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#66aacc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnback"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#760000"
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btnsendmessage"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#760000"
+                android:layout_marginBottom="10dp"
+                android:text="Send Message"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

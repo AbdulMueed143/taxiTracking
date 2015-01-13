@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="1.0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_weight="1.0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <WebView
+            android:id="@+id/webviewgooglesearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+
+    </LinearLayout>
+
+    <!--LinearLayout
+        android:background="#6688aa"
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Button
+            android:id="@+id/btnsearchback"
+            android:background="#760000"
+            android:text="Back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout-->
+
+</LinearLayout>
