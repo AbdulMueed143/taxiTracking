@@ -83,7 +83,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/btnpostmessage"
-            android:text="Post Messages"
+            android:text="Add Booking"
             android:padding="2dp"
             android:textSize="20dp"
             android:background="#760000"

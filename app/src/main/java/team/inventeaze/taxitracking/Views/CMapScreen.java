@@ -298,6 +298,17 @@ public class CMapScreen extends LinearLayout implements View.OnClickListener, IL
 
     }
 
+    public void SetDestination(String destinationPath) {
+
+        destinationPath = destinationPath.replace(" ","+");
+        //add + at every place where there is space
+        gpsLink = "https://maps.googleapis.com/maps/api/geocode/json?address="+destinationPath+"&key=AIzaSyAdXRKCAZAOjmKY8C9PUYRg-tFdFn1Qtsw";
+        //https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAdXRKCAZAOjmKY8C9PUYRg-tFdFn1Qtsw
+
+        new Clatlong().execute();
+
+    }
+
     boolean firstTime = true;
 
     public String GetTimeStamap() {

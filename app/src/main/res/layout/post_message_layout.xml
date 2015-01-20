@@ -6,12 +6,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <!--LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+
+        <RelativeLayout
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/itemtext"
+                android:text="Company: "
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtcompany"
+                android:layout_alignParentRight="true"
+                android:layout_width="260dp"
+                android:layout_height="match_parent" />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout-->
+
     <LinearLayout
         android:layout_weight="0.1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
         <RelativeLayout
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/itemtext"
+                android:text="Customer Name: "
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtcustomername"
+                android:layout_alignParentRight="true"
+                android:layout_width="260dp"
+                android:layout_height="match_parent" />
+
+
+        </RelativeLayout>
+
+        <!--RelativeLayout
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/itemtext"
+                android:text="Booking Datetime: "
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edtbookingdatetime"
+                android:layout_alignParentRight="true"
+                android:layout_width="260dp"
+                android:layout_height="match_parent" />
+
+
+        </RelativeLayout-->
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <!--RelativeLayout
             android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent">
@@ -57,95 +151,7 @@
                 android:layout_height="match_parent" />
 
 
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight="0.1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
-
-        <RelativeLayout
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-
-            <TextView
-
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/itemtext"
-                android:text="Customer Name: "
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
-
-            <EditText
-                android:id="@+id/edtcustomername"
-                android:layout_alignParentRight="true"
-                android:layout_width="260dp"
-                android:layout_height="match_parent" />
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-
-            <TextView
-
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/itemtext"
-                android:text="Company: "
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
-
-            <EditText
-                android:id="@+id/edtcompany"
-                android:layout_alignParentRight="true"
-                android:layout_width="260dp"
-                android:layout_height="match_parent" />
-
-
-        </RelativeLayout>
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight="0.1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
-
-        <RelativeLayout
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-
-            <TextView
-
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/itemtext"
-                android:text="Booking Datetime: "
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
-
-            <EditText
-                android:id="@+id/edtbookingdatetime"
-                android:layout_alignParentRight="true"
-                android:layout_width="260dp"
-                android:layout_height="match_parent" />
-
-
-        </RelativeLayout>
+        </RelativeLayout-->
 
         <RelativeLayout
             android:layout_weight="0.5"
@@ -172,8 +178,8 @@
         </RelativeLayout>
 
 
-
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_weight="0.1"
@@ -203,7 +209,7 @@
 
 
         </RelativeLayout>
-        <RelativeLayout
+        <!--RelativeLayout
             android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent">
@@ -225,7 +231,7 @@
                 android:layout_height="match_parent" />
 
 
-        </RelativeLayout>
+        </RelativeLayout-->
 
 
 
@@ -236,7 +242,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <RelativeLayout
+        <!--RelativeLayout
             android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent">
@@ -258,7 +264,7 @@
                 android:layout_height="match_parent" />
 
 
-        </RelativeLayout>
+        </RelativeLayout-->
 
         <RelativeLayout
             android:layout_weight="0.5"
@@ -317,6 +323,16 @@
 
 
         </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
         <RelativeLayout
             android:layout_weight="0.5"
             android:layout_width="0dp"
@@ -342,15 +358,7 @@
         </RelativeLayout>
 
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight="0.1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
-
-        <RelativeLayout
+        <!--RelativeLayout
             android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent">
@@ -396,12 +404,12 @@
                 android:layout_height="match_parent" />
 
 
-        </RelativeLayout>
+        </RelativeLayout-->
 
 
 
     </LinearLayout>
-    <LinearLayout
+    <!--LinearLayout
         android:layout_weight="0.1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
@@ -453,7 +461,7 @@
 
 
 
-    </LinearLayout>
+    </LinearLayout-->
 
 
 

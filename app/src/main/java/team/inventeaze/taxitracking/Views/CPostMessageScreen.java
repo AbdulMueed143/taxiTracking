@@ -37,9 +37,9 @@ public class CPostMessageScreen extends LinearLayout implements View.OnClickList
     Button btnpostmessage;
 
 
-    EditText edtbookingid, edtbookingtype, edtcustomername, edtcompany, edtbookingdatetime, edtpickup, edtcomments;
-    EditText edtdestination, edtflightinfo, edtservicetype, edtdriverid, edtcost, edtcontactnumber, edtdetails;
-    EditText edtbookingstatus, edtpaymentstatus;
+  //  EditText edtbookingid, edtbookingtype,  edtcompany, edtbookingdatetime,  edtflightinfo, edtservicetype, edtcomments;
+    EditText edtdestination, edtcustomername,edtpickup, edtdriverid, edtcost, edtcontactnumber ;
+   // EditText edtbookingstatus, edtpaymentstatus,edtdetails;
 
     public void SetIMEI(String pDeviceIMEI) {
         DEVICE_IMEI = pDeviceIMEI;
@@ -67,22 +67,22 @@ public class CPostMessageScreen extends LinearLayout implements View.OnClickList
         btnpostmessage.setOnClickListener(this);
 
 
-        edtbookingid = (EditText) view.findViewById(R.id.edtbookingid);
-        edtbookingstatus = (EditText) view.findViewById(R.id.edtbookingstatus);
-        edtbookingtype = (EditText) view.findViewById(R.id.edtbookingtype);
-        edtbookingdatetime = (EditText) view.findViewById(R.id.edtbookingdatetime);
-        edtcomments = (EditText) view.findViewById(R.id.edtcomments);
+       // edtbookingid = (EditText) view.findViewById(R.id.edtbookingid);
+      //  edtbookingstatus = (EditText) view.findViewById(R.id.edtbookingstatus);
+      //  edtbookingtype = (EditText) view.findViewById(R.id.edtbookingtype);
+     //   edtbookingdatetime = (EditText) view.findViewById(R.id.edtbookingdatetime);
+     //   edtcomments = (EditText) view.findViewById(R.id.edtcomments);
         edtdestination = (EditText) view.findViewById(R.id.edtdestination);
-        edtcompany = (EditText) view.findViewById(R.id.edtcompany);
+      //  edtcompany = (EditText) view.findViewById(R.id.edtcompany);
         edtcontactnumber = (EditText) view.findViewById(R.id.edtcontactnumber);
         edtcost = (EditText) view.findViewById(R.id.edtcost);
-        edtservicetype = (EditText) view.findViewById(R.id.edtservicetype);
+     //   edtservicetype = (EditText) view.findViewById(R.id.edtservicetype);
         edtpickup = (EditText) view.findViewById(R.id.edtpickup);
-        edtflightinfo = (EditText) view.findViewById(R.id.edtflightinfo);
+    //    edtflightinfo = (EditText) view.findViewById(R.id.edtflightinfo);
         edtdriverid =  (EditText) view.findViewById(R.id.edtdriverid);
-        edtdetails = (EditText) view.findViewById(R.id.edtdetails);
+     //   edtdetails = (EditText) view.findViewById(R.id.edtdetails);
         edtcustomername = (EditText) view.findViewById(R.id.edtcustomername);
-        edtpaymentstatus = (EditText) view.findViewById(R.id.edtpaymentstatus);
+      //  edtpaymentstatus = (EditText) view.findViewById(R.id.edtpaymentstatus);
 
         edtdriverid.setText(DEVICE_IMEI);
 
@@ -111,21 +111,21 @@ public class CPostMessageScreen extends LinearLayout implements View.OnClickList
 
             try {
                 utility = new MultipartUtility("http://ehmad11.com/labs/cab/index.php?r=booking/cabpost"); //chagne this link
-                utility.addFormField("booking_id",edtbookingid.getText().toString());
-                utility.addFormField("booking_type",edtbookingtype.getText().toString());
-                utility.addFormField("booking_status", edtbookingstatus.getText().toString());
-                utility.addFormField("booking_datetime", edtbookingdatetime.getText().toString());
+        //        utility.addFormField("booking_id",edtbookingid.getText().toString());
+          //      utility.addFormField("booking_type",edtbookingtype.getText().toString());
+          //      utility.addFormField("booking_status", edtbookingstatus.getText().toString());
+           //     utility.addFormField("booking_datetime", edtbookingdatetime.getText().toString());
                 utility.addFormField("customer_name", edtcustomername.getText().toString());
-                utility.addFormField("payment_status", edtpaymentstatus.getText().toString());
-                utility.addFormField("pickup", edtpickup.getText().toString());
-                utility.addFormField("destination", edtdestination.getText().toString());
-                utility.addFormField("details", edtdetails.getText().toString());
-                utility.addFormField("flight_information", edtflightinfo.getText().toString());
+             //   utility.addFormField("payment_status", edtpaymentstatus.getText().toString());
+                utility.addFormField("from", edtpickup.getText().toString());
+                utility.addFormField("to", edtdestination.getText().toString());
+           //     utility.addFormField("details", edtdetails.getText().toString());
+             //   utility.addFormField("flight_information", edtflightinfo.getText().toString());
                 utility.addFormField("cost", edtcost.getText().toString());
                 utility.addFormField("contact_number", edtcontactnumber.getText().toString());
-                utility.addFormField("company", edtcompany.getText().toString());
-                utility.addFormField("comments", edtcomments.getText().toString());
-                utility.addFormField("service_type", edtservicetype.getText().toString());
+           //     utility.addFormField("company", edtcompany.getText().toString());
+            //    utility.addFormField("comments", edtcomments.getText().toString());
+            //    utility.addFormField("service_type", edtservicetype.getText().toString());
            //     utility.addFormField(,.getText().toString());
                 utility.addFormField("imei",DEVICE_IMEI);
                 utility.addFormField("username", MyActivity.username);
@@ -145,6 +145,7 @@ public class CPostMessageScreen extends LinearLayout implements View.OnClickList
             if(s == null)
             {
                 Toast.makeText(context, "Could not send message,Server Returns Null", Toast.LENGTH_LONG).show();
+
                 return;
             }
 
@@ -155,8 +156,20 @@ public class CPostMessageScreen extends LinearLayout implements View.OnClickList
                 JSONObject bookingres = new JSONObject(s); //here we get all the bookings..
                 Iterator<String> keysiterator = bookingres.keys();
 
-                while(keysiterator.hasNext())
-                    Toast.makeText(context,"Server Says: "+bookingres.getString(keysiterator.next()),Toast.LENGTH_LONG).show();
+                while(keysiterator.hasNext()) {
+                    Toast.makeText(context, "Server Says: " + bookingres.getString(keysiterator.next()), Toast.LENGTH_LONG).show();
+                    //here we will make destination as the path shown
+
+                    if(pageEvents != null) {
+                        String data = edtdestination.getText().toString();
+                        Toast.makeText(context,"Destination: "+data,Toast.LENGTH_LONG).show();
+                        pageEvents.EventInPage(viewId,"destinationpath",data);
+                    }
+                    else {
+                        Toast.makeText(context,"PageEvents is null",Toast.LENGTH_LONG).show();
+                    }
+
+                }
 
             }
             catch (JSONException jex) {

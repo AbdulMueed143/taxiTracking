@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -226,6 +227,15 @@ public class MyActivity extends Activity implements IViewPageInterface {
     public void EventInPage(int viewid, String eventname, Object object) {
 
         switch (viewid) {
+
+            case POST_MESSAGE_SCREEN:
+                if(eventname.toLowerCase().contains("destinationpath")) {
+                    String destpath = (String) object; //here we get the destination path string :p
+                    Toast.makeText(this,"Destimnation: "+destpath,Toast.LENGTH_SHORT).show();
+                    mapScreen.SetDestination(destpath);
+                    viewFlipper.setDisplayedChild(MAP_SCREEN);
+                }
+                break;
 
             case LOGIN_SCREEN:
                 if(eventname.toLowerCase().contains("setusername")) {
