@@ -89,7 +89,7 @@ public class CBookingScreen extends LinearLayout {
         protected String doInBackground(String... strings) {
 
             try {
-                utility = new MultipartUtility("http://ehmad11.com/labs/cab/index.php?r=booking/checkall"); //chagne this link
+                utility = new MultipartUtility("http://system.sudburycab.com/index.php?r=booking/checkall"); //chagne this link
                 utility.addFormField("action","recieve");
                 utility.addFormField("imei",DEVICE_IMEI);
                 utility.addFormField("username", MyActivity.username);

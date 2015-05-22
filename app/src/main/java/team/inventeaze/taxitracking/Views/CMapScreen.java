@@ -184,7 +184,6 @@ public class CMapScreen extends LinearLayout implements View.OnClickListener, IL
 
         txtvspeeddata = (TextView) view.findViewById(R.id.txtvspeeddata);
 
-
         txtusername = (TextView) view.findViewById(R.id.txtvusername);
         imvadddirection = (ImageView) view.findViewById(R.id.imvadddirection); //add user directions
         imvadddirection.setOnClickListener(this);
@@ -555,7 +554,7 @@ public class CMapScreen extends LinearLayout implements View.OnClickListener, IL
         protected String doInBackground(String... strings) {
 
             try {
-                utility = new MultipartUtility("http://ehmad11.com/labs/cab/track.php");
+                utility = new MultipartUtility("http://system.sudburycab.com/track.php");
                 utility.addFormField("action","location");
                 utility.addFormField("timestamp",GetTimeStamap());
 
@@ -585,10 +584,11 @@ public class CMapScreen extends LinearLayout implements View.OnClickListener, IL
 
             try {
 
-                utility = new MultipartUtility("http://ehmad11.com/labs/cab/index.php?r=booking/check");
+                utility = new MultipartUtility("http://system.sudburycab.com/index.php?r=booking/check");
 
-               // utility.addFormField("read","0");
                 utility.addFormField("imei",String.valueOf(DEVICE_IMEI));
+
+
 
                 Log.d("taxi","Sending: "+String.valueOf(DEVICE_IMEI));
 
@@ -960,7 +960,7 @@ LatLng destinationPosition;
         protected String doInBackground(String... strings) {
 
             try {
-                utility = new MultipartUtility("http://ehmad11.com/labs/cab/index.php?r=message/check"); //chagne this link
+                utility = new MultipartUtility("http://system.sudburycab.com/index.php?r=message/check"); //chagne this link
                 utility.addFormField("action","recieve");
                 utility.addFormField("imei",DEVICE_IMEI);
                 utility.addFormField("username", MyActivity.username);

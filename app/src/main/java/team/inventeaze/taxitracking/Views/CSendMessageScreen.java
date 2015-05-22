@@ -169,7 +169,7 @@ public class CSendMessageScreen extends LinearLayout implements View.OnClickList
         protected String doInBackground(String... strings) {
 
             try {
-                utility = new MultipartUtility("http://ehmad11.com/labs/cab/index.php?r=message/post"); //chagne this link
+                utility = new MultipartUtility("http://system.sudburycab.com/index.php?r=message/post"); //chagne this link
                 utility.addFormField("action","usermessage");
                 utility.addFormField("imei",deviceID);
                 utility.addFormField("username", MyActivity.username);

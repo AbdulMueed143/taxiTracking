@@ -12,9 +12,13 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <!-- obseleted meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBDdvX5DsQYdaCie-LV0tDpKZYPzDp39P8"/-->
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBDdvX5DsQYdaCie-LV0tDpKZYPzDp39P8"/>
+            android:value="AIzaSyA9kVjeYyAG9AvteidH4xv3GQNwqJaZ33U"/>
 
         <activity
             android:name=".MyActivity"

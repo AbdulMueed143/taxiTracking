@@ -88,7 +88,7 @@ public class CloginScreen extends LinearLayout implements View.OnClickListener {
             try {
 
 
-                utility = new MultipartUtility("http://ehmad11.com/labs/cab/login.php");
+                utility = new MultipartUtility("http://system.sudburycab.com");
                 utility.addFormField("action","login");
                 username = edtusername.getText().toString();
                 Log.d("data","username: "+username);
@@ -109,7 +109,7 @@ public class CloginScreen extends LinearLayout implements View.OnClickListener {
             super.onPostExecute(result);
 
             if(result == null) {
-                Toast.makeText(context, "No internet connection available, please connect to internet first. ", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Either no internet connection or server not responding. ", Toast.LENGTH_LONG).show();
                 progressDialog.cancel();
                 return;
             }

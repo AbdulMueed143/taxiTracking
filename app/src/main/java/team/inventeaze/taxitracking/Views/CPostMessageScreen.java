@@ -110,7 +110,7 @@ public class CPostMessageScreen extends LinearLayout implements View.OnClickList
         protected String doInBackground(String... strings) {
 
             try {
-                utility = new MultipartUtility("http://ehmad11.com/labs/cab/index.php?r=booking/cabpost"); //chagne this link
+                utility = new MultipartUtility("http://system.sudburycab.com/index.php?r=message/post"); //chagne this link
         //        utility.addFormField("booking_id",edtbookingid.getText().toString());
           //      utility.addFormField("booking_type",edtbookingtype.getText().toString());
           //      utility.addFormField("booking_status", edtbookingstatus.getText().toString());
